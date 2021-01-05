@@ -17,4 +17,10 @@
 		<!-- Set up constructor injection -->
 		<constructor-arg ref="myBonus"/>
 	</bean>
+	
+	<bean id="myCaptainCoach"
+		class="com.ar.ali.code.springdemo.CaptainCoach">
+		<!-- Set up setter injection -->
+		<property name="playBonusService" ref="myBonus"/> 
+	</bean>
 </beans>
