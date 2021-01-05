@@ -22,5 +22,9 @@
 		class="com.ar.ali.code.springdemo.CaptainCoach">
 		<!-- Set up setter injection -->
 		<property name="playBonusService" ref="myBonus"/> 
+		
+		<!-- Inject literal values -->
+		<property name="emailAddress" value="vilte.emanuel@hotmail.com"/>
+		<property name="team" value="River Plate"/>
 	</bean>
 </beans>
