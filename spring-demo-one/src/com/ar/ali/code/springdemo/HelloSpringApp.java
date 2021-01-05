@@ -13,12 +13,13 @@ public class HelloSpringApp {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// Retrieve bean from spring container
-		Coach theCoach = context.getBean("myCoach", Coach.class);
-		Coach theCoach2 = context.getBean("myBaseballCoach", Coach.class);
+		Coach theCoach = context.getBean("myTrackCoach", Coach.class);
 		
 		// Call methods on the bean
 		System.out.println(theCoach.getDailyWorkout());
-		System.out.println(theCoach2.getDailyWorkout());
+		
+		// Let's call our new method for BonusService
+		System.out.println(theCoach.getDailyBonus());
 		
 		// Close the context
 		context.close();
