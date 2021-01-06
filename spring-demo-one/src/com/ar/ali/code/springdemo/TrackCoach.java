@@ -19,5 +19,14 @@ public class TrackCoach implements Coach {
 	public String getDailyBonus() {
 		return "Just Do It: "+ playBonusService.getBonus();
 	}
-
+	
+	// Add a init method
+	public void doInitMethod() {
+		System.out.println("TrackCoach: inside method doInitMethod");
+	}
+	
+	// Add a destroy method
+	public void doDestroyMethod() {
+		System.out.println("TrackCoach: inside method doDestroyMethod");
+	}
 }
