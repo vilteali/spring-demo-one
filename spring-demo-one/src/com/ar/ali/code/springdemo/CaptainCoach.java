@@ -7,6 +7,7 @@ public class CaptainCoach implements Coach {
 	private String emailAddress;
 	private String team;
 	private PlayBonusService playBonusService;
+	private RandomBonusService randomBonusService;
 	
 	// Create a constructor without arguments
 	public CaptainCoach() {
@@ -37,6 +38,11 @@ public class CaptainCoach implements Coach {
 		this.playBonusService = playBonusService;
 	}
 	
+	public void setRandomBonusService(RandomBonusService randomBonusService) {
+		System.out.println("CaptainCoach: inside setter method - setRandomBonusService");
+		this.randomBonusService = randomBonusService;
+	}
+	
 	@Override
 	public String getDailyWorkout() {
 		return "Practice fast bowling for 15 minutes";
@@ -44,7 +50,7 @@ public class CaptainCoach implements Coach {
 
 	@Override
 	public String getDailyBonus() {
-		return playBonusService.getBonus();
+		return randomBonusService.getBonus();
 	}
 
 }
